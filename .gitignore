@@ -1,0 +1,6 @@
+.vscode/
+api/node_modules/
+api/dist/
+
+# temp/*
+# !temp/.gitkeep
