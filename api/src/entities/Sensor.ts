@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import DateProps from './DateProps.helper';
-import Measurement from './Measurements';
+import Measurement from './Measurement';
 
 @Entity('sensors')
 class Sensor extends DateProps {
