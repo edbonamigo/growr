@@ -1,6 +1,12 @@
 .vscode/
+
+yarn.lock
+yarn-error.lock
+
 api/node_modules/
 api/dist/
+api/yarn.lock
+api/yarn-error.lock
 
 # temp/*
 # !temp/.gitkeep
