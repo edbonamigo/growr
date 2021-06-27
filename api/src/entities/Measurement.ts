@@ -8,9 +8,11 @@ class Measurement extends DateProps {
   id: string;
 
   @Column()
-  values: number;
+  value: number;
 
-  @ManyToOne(() => Sensor, (sensor) => sensor.measurements)
+  @ManyToOne(() => Sensor, (sensor) => sensor.measurements, {
+    eager: true,
+  })
   sensor: Sensor;
 }
 
