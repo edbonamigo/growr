@@ -3,8 +3,11 @@ import { getRepository } from 'typeorm';
 
 import Measurement from '../entities/Measurement';
 import CreateMeasurementService from '../services/CreateMeasurementService';
+import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 
 const measurementsRouter = Router();
+
+measurementsRouter.use(ensureAuthenticated);
 
 measurementsRouter.get('/', async (request, response) => {
   const measurementsRepository = getRepository(Measurement);

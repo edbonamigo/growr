@@ -4,7 +4,11 @@ import { getRepository } from 'typeorm';
 import Sensor from '../entities/Sensor';
 import CreateSensorService from '../services/CreateSensorService';
 
+import ensureAuthenticated from '../middlewares/ensureAuthenticated';
+
 const sensorsRouter = Router();
+
+sensorsRouter.use(ensureAuthenticated);
 
 sensorsRouter.get('/', async (request, response) => {
   const sensorsRepository = getRepository(Sensor);
